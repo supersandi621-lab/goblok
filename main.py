@@ -174,6 +174,7 @@ async def health_server():
 async def main():
     await health_server()
     async with bot:
+        await bot.load_extension("cogs.voice")
         await bot.start(TOKEN)
 
 
